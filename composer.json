@@ -1,0 +1,13 @@
+{
+    "name": "kcs/doctrine-extras",
+    "description": "Watchdog Bundle for Symfony2 and Doctrine2",
+    "require": {
+        "php": ">=5.3.3",
+        "doctrine/dbal": "~2.4"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-0": { "Kcs\\Doctrine\\": "lib/" }
+    }
+}
+
