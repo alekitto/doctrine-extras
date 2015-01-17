@@ -5,9 +5,11 @@ namespace Kcs\Doctrine\Types;
 abstract class Type
 {
     const BINARY_ARRAY = 'binary_array';
+    const UTC_DATE_TIME = 'utc_datetime';
 
     private static $_typesMap = array(
-        self::BINARY_ARRAY => "Kcs\\Doctrine\\Types\\BinaryArrayType"
+        self::BINARY_ARRAY => "Kcs\\Doctrine\\Types\\BinaryArrayType",
+        self::UTC_DATE_TIME => "Kcs\\Doctrine\\Types\\UTCDateTimeType"
     );
 
     public static function registerTypes($override = false)
