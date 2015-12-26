@@ -3,6 +3,7 @@
 namespace Kcs\Doctrine\Cache;
 
 use Doctrine\Common\Cache\CacheProvider;
+use Doctrine\Common\Cache\Cache;
 
 /**
  * APCu cache provider.

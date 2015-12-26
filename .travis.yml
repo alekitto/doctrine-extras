@@ -1,0 +1,26 @@
+language: php
+
+sudo: false
+
+cache:
+    directories:
+        - vendor
+        - $HOME/.composer/cache
+
+php:
+    - 5.6
+    - 7.0
+
+before_install:
+    - if [[ $TRAVIS_PHP_VERSION =~ 5.6 ]] ; then echo yes | pecl install apcu-4.0.10; fi;
+    - if [[ $TRAVIS_PHP_VERSION = 7.* ]] ; then pecl config-set preferred_state beta; echo yes | pecl install apcu; fi;
+    - phpenv config-add ./travis/php.ini;
+
+install:
+    - travis_retry composer install
+
+script:
+    - ./vendor/bin/phpunit -c . -v
+
+matrix:
+    fast_finish: true

@@ -5,9 +5,18 @@
         "php": ">=5.3.3",
         "doctrine/dbal": "~2.4"
     },
+    "require-dev": {
+        "doctrine/common": "~2.4",
+        "doctrine/cache": "~1.4",
+        "phpunit/phpunit": "~5.0"
+    },
     "license": "MIT",
     "autoload": {
         "psr-0": { "Kcs\\Doctrine\\": "lib/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Kcs\\Doctrine\\Tests\\": "tests" },
+        "psr-4": { "Doctrine\\Tests\\": "vendor/doctrine/cache/tests/Doctrine/Tests" }
     }
 }
 
